@@ -20,6 +20,12 @@ GitHub createGitHubClient(
   return new GitHub(auth: auth, endpoint: endpoint);
 }
 
+GitHub createGitHubClientByAccount(String username, String password) {
+  return new GitHub(
+      auth: new Authentication.basic(username, password),
+      endpoint: "https://api.github.com");
+}
+
 const List<String> COMMON_GITHUB_TOKEN_ENV_KEYS = const [
   "GITHUB_ADMIN_TOKEN",
   "GITHUB_DART_TOKEN",
