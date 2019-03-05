@@ -3,3 +3,6 @@
 .pub
 packages
 pubspec.lock
+.idea
+.DS_Store
+.vscode
