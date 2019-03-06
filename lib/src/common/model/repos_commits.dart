@@ -52,7 +52,7 @@ class RepositoryCommit {
       ..stats = CommitStats.fromJSON(input['stats'] as Map<String, dynamic>);
 
     if (input['parents'] != null) {
-      commit.parents = (input['parents'] as List<Map<String, dynamic>>)
+      commit.parents = (input['parents'] as List<dynamic>)
           .map((parent) => GitCommit.fromJson(parent))
           .toList();
     }
